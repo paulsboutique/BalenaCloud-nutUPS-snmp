@@ -1,0 +1,4 @@
+[monuser]
+       password = monuser
+       actions = SET
+       instcmds = ALL
