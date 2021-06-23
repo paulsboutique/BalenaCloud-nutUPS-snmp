@@ -12,14 +12,16 @@ ENV NUT_VERSION 2.7.4
 
 # Update and install packages
 RUN apt-get update \
-    && apt-get install nut curl git python3-pip python-pip tzdata nano snmpd  -yq \
+    && apt-get install nut nut-client curl git python3-pip python-pip tzdata nano snmpd -yq \
     && rm -rf /var/lib/apt/lists/*
 	
 COPY ups.conf /etc/nut/
+COPY upsd.conf /etc/nut
 COPY upsmon.conf /etc/nut/
 COPY upsd.users /etc/nut/
 COPY snmpd.conf /etc/snmp/
 COPY ups-nut.sh /etc/snmp/
+
 
 # Install and configure webnut
 RUN pip install setuptools \
@@ -37,6 +39,7 @@ RUN pip install setuptools \
 # Add run and set permissions
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
+
 
 WORKDIR /app/webNUT
 
