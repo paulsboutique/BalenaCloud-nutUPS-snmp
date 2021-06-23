@@ -8,7 +8,7 @@ sed -i 's/MODE=none/MODE=standalone/g' /etc/nut/nut.conf
 chgrp -R nut /etc/nut /dev/bus/usb
 chmod -R o-rwx /etc/nut
 chmod +x /etc/snmp/ups-nut.sh
-chmod +x /etc/snmp/ups.sh
+
 
 
 # Start nut services in order
