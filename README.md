@@ -1,7 +1,7 @@
 # nutUPS Balena-cloud / OS Docker
 
 Docker image forked for Balena-cloud / OS.<br>
-Compiled for Raspberry pi 2<br>
+Compiled for Raspberry Pi1 and B+ <br>
 Has the following:<br>
 -NUT UPS Server<br>
 -webNUT interface<br>
