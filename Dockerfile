@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi2
+FROM balenalib/raspberry-pi
 
 ENV TZ=Australia/Adelaide
 
